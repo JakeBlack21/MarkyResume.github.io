@@ -1,0 +1,440 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Form Order</title>
+    <style type="text/css">
+    label,
+       h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        color: black;
+        display: block;
+        text-align: left;
+        margin-top: 1.25em;
+      }
+
+      fieldset{
+        border-style: dotted;
+      }
+
+      input[type="text"],
+      select {
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      fieldset legend {
+        padding-top: 1.25em;
+      }
+
+      fieldset label {
+        margin: 0;
+        padding: 0;
+        display: block;
+        font-weight: normal;
+        position: relative;
+        left: -0.5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 0.5em;
+        padding-top: 0.125em;
+        padding-bottom: 0.125em;
+        border: 2px solid transparent;
+        width: 9em;
+      }
+
+      select {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.25em;
+        background-color: #FFFEFF;
+        font-size: 1em;
+      }
+
+      input[type="submit"] {
+        margin-top: 2em;
+      }
+        input[type=submit]:focus {
+        outline: 2px solid black;
+      }
+
+      input[type="text"]:hover,
+      fieldset label:hover {
+        background-color: #ADDFFF;
+      }
+
+      input[type="text"]:focus {
+        outline: 2px solid black;
+        background-color: #EEEEEE;
+      }
+
+      select:focus {
+        outline: 2px solid black;
+        background-color: #EEEEEE;
+      }
+
+      fieldset label.focus {
+        background-color: #EEEEEE;
+        border-color: black;
+      }
+
+      a.header {
+      line-height:10px;
+      text-decoration:none;
+      font-family: Poppins;
+      font-size: 19px;
+      text-transform: uppercase;
+      color: lightblue;
+      letter-spacing: 3px;
+      word-spacing:3px;
+    }
+    a.header:hover{
+      color: orange;
+
+    }
+
+    header{
+      padding:10px;
+      line-height:10px; 
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 16px;
+  }
+
+  .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+  }
+
+  .sidebar a:hover {
+      color: orange;
+  } 
+
+  .main {
+      margin-left: 160px; 
+      padding: 0px 10px;
+  }
+
+  @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+  }
+
+
+
+
+
+    
+    </style>
+</head>
+
+
+<body style="background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(Cadelina_IMAGES_CSAD/orderform.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+    <link rel="stylesheet" type="text/css">
+    <!--Cadelina, Mark Anthony C.-->
+    <!--1 May, 2021-->
+
+    <script>
+    function itemFocus(event) {
+          if( event.target ) event.target.parentNode.classList.add("focus");
+        }
+
+        function itemBlur(event) {
+          if( event.target ) event.target.parentNode.classList.remove("focus");
+        }
+
+        window.addEventListener('load', function load(event) {
+          var itemList = document.querySelectorAll('fieldset input');
+
+          for(var i = 0; i < itemList.length; i++) {
+            var item = itemList[i];
+            item.addEventListener('focus', itemFocus, true);
+            item.addEventListener('blur', itemBlur, true);
+          }
+        }, false);
+    </script>
+
+
+<div><img src="Cadelina_IMAGES_CSAD/order.png" width="180" height="100"/>
+  <label for="id-name">Fullname</label></a>
+  <input id="id-name"
+       type="text"
+       size="30">
+  <label for="id-address">
+    Complete Address
+  </label>
+</div>
+  <input id="id-address"
+       type="text"
+       size="40">
+  <label for="id-phone">
+    Contact Number
+  </label>
+  <input id="id-phone"
+       type="text"
+       size="14">
+     <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+  <label for="id-delivery">
+    Notes(For directions)
+  </label>
+ <textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+  <fieldset>
+    <h2>
+    Burger
+    </h2>
+      <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            Single patty
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Double patty
+          
+    </label>
+    <fieldset>
+      <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            Cheese
+    </label>
+    
+    <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            coleslaw
+    </label>
+    
+    <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            tomato
+    </label>
+    
+    <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            onion
+    </label>
+    
+    
+    <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            cucumber
+    </label>
+    
+    <label>
+      <input name="topping"
+           type="checkbox"
+           value="Cheese">
+            bacon
+    </label>
+    
+    
+    </fieldset>
+    <p>choice of bun</p>
+    <label>
+     <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+         white bun
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+         wheat bun
+          
+    </label>
+    <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="15">
+   
+  </fieldset>
+  <fieldset>
+    <h2>
+      Pasta
+    </h2>
+    <label>
+    <p>Sauce</p>
+      <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            Carbonara
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Pesto
+          
+    </label>
+    
+    <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            Spaghetti
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Extra cheese 
+          
+    </label>
+     <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Extra Sauce 
+          
+    </label>
+    
+    <label for="quantity">Quantity(perbox):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10">
+  
+  <fieldset>
+   <h2>
+    Fries
+    </h2>
+    <label for="Fries">Size:</label>
+  <select name="Size" id="Size">
+    <option value="Small">S</option>
+    <option value="Medium">M</option>
+    <option value="Large">L</option>
+  </select>
+  <p>Flavor</p>
+  <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            BBQ
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Cheese
+          
+    </label>
+    
+    <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            Sour cream
+          
+    </label>
+    <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10">
+   
+    
+  </fieldset>
+  
+  <fieldset>
+  <h2>Drinks</h2>
+  <label for="Drinks">drinks:</label>
+  <select name="Size" id="Size">
+    <option value="Soda">Soda</option>
+    <option value="Milk">Milk</option>
+    <option value="Water">Water</option>
+    <option value="Juice">Juice</option>
+  </select>
+  <label for="Drinks">Size:</label>
+  <select name="Size" id="Size">
+    <option value="S">Small</option>
+    <option value="M">Medium</option>
+    <option value="L">Large</option>
+  </select>
+  
+  <label for="quantity">Quantity:
+  <input type="number" id="quantity" name="quantity" min="1" max="10">
+  </label>
+  </fieldset>
+    <input id="id-crust1"
+           name="crust"
+           type="radio"
+           value="Thin">
+      
+            Pickup
+          
+    </label>
+    <label>
+      <input id="id-crust2"
+           name="crust"
+           type="radio"
+           value="Classic">
+      
+            Delivery
+          
+    </label>
+    
+    <label for="id-delivery">
+   Feedback
+  </label>
+ <textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+          
+    
+  </fieldset>
+  <input type="submit"
+       value="Submit Order"
+       onclick="submitOrder(event)">
+<button type="reset" value="Reset">Reset</button>
+
+
+
+</body>
+</html>
