@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Pizza Form Order</title>
     <style type="text/css">
     label,
@@ -64,7 +67,7 @@
 
       input[type="text"]:hover,
       fieldset label:hover {
-        background-color: #ADDFFF;
+        background-color: orange;
       }
 
       input[type="text"]:focus {
@@ -136,10 +139,10 @@
       .sidebar a {font-size: 18px;}
   }
 
-
-
-
-
+   .center{
+      width: 70%;
+      margin: auto;
+  }
     
     </style>
 </head>
@@ -149,6 +152,14 @@
     <link rel="stylesheet" type="text/css">
     <!--Cadelina, Mark Anthony C.-->
     <!--1 May, 2021-->
+
+    <div class="sidebar">
+      <img src="Cadelina_IMAGES_CSAD/food.jpg" width="150" height="50"/>
+      <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+      <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+      <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
 
     <script>
     function itemFocus(event) {
@@ -170,29 +181,66 @@
         }, false);
     </script>
 
-
+<div class="center">
+  <form action="/action_page.php">
 <div><img src="Cadelina_IMAGES_CSAD/order.png" width="180" height="100"/>
-  <label for="id-name">Fullname</label></a>
+
+  <h2>BASIC INFORMATION</h2>
+  <BR>
+  <label for="id-name">First Name *</label>
   <input id="id-name"
        type="text"
        size="30">
+
+  <label for="id-name">Middle Name *</label>
+  <input id="id-name"
+       type="text"
+       size="30">
+
+  <label for="id-name">Last Name *</label>
+  <input id="id-name"
+       type="text"
+       size="30">
+
   <label for="id-address">
-    Complete Address
+    Address *
   </label>
 </div>
   <input id="id-address"
        type="text"
        size="40">
   <label for="id-phone">
-    Contact Number
+    Contact Number *
   </label>
   <input id="id-phone"
        type="text"
-       size="14">
-     <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email">
+       size="18">
+  <label for="email">
+    Email Address *
+  </label>
+  <input id="email"
+       type="text"
+       size="40">
+   <h2>
+    Gender *
+    </h2>
+  <label>
+      <input id="id-gender"
+           name="gender"
+           type="radio"
+           value="Classic">  
+            Male      
+    </label>
+
+  <label>
+      <input id="id-gender"
+           name="gender"
+           type="radio"
+           value="Classic">  
+            Female      
+    </label>
   <label for="id-delivery">
-    Notes(For directions)
+    Destination 
   </label>
  <textarea rows="4" cols="50" name="comment" form="usrform">
 Enter text here...</textarea>
@@ -200,8 +248,8 @@ Enter text here...</textarea>
     <h2>
     Burger
     </h2>
-      <input id="id-crust1"
-           name="crust"
+      <input id="id-burger1"
+           name="burger"
            type="radio"
            value="Thin">
       
@@ -209,15 +257,15 @@ Enter text here...</textarea>
           
     </label>
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-burger2"
+           name="burger"
            type="radio"
            value="Classic">
       
             Double patty
           
     </label>
-    <fieldset>
+    <hr>
       <label>
       <input name="topping"
            type="checkbox"
@@ -262,38 +310,40 @@ Enter text here...</textarea>
     </label>
     
     
-    </fieldset>
+    <hr>
     <p>choice of bun</p>
     <label>
-     <input id="id-crust1"
-           name="crust"
+     <input id="id-buns1"
+           name="buns"
            type="radio"
            value="Thin">
       
          white bun
           
     </label>
+	
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-buns2"
+           name="buns"
            type="radio"
            value="Classic">
       
          wheat bun
           
     </label>
+	
     <label for="quantity">Quantity:</label>
   <input type="number" id="quantity" name="quantity" min="1" max="15">
-   
-  </fieldset>
+   </fieldset>
+ 
   <fieldset>
     <h2>
       Pasta
     </h2>
     <label>
     <p>Sauce</p>
-      <input id="id-crust1"
-           name="crust"
+      <input id="id-pasta1"
+           name="pasta"
            type="radio"
            value="Thin">
       
@@ -301,8 +351,8 @@ Enter text here...</textarea>
           
     </label>
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-pasta2"
+           name="pasta"
            type="radio"
            value="Classic">
       
@@ -310,8 +360,8 @@ Enter text here...</textarea>
           
     </label>
     
-    <input id="id-crust1"
-           name="crust"
+    <input id="id-pasta1"
+           name="pasta"
            type="radio"
            value="Thin">
       
@@ -319,8 +369,8 @@ Enter text here...</textarea>
           
     </label>
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-pasta2"
+           name="pasta"
            type="radio"
            value="Classic">
       
@@ -328,8 +378,8 @@ Enter text here...</textarea>
           
     </label>
      <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-pasta2"
+           name="pasta"
            type="radio"
            value="Classic">
       
@@ -340,19 +390,21 @@ Enter text here...</textarea>
     <label for="quantity">Quantity(perbox):</label>
   <input type="number" id="quantity" name="quantity" min="1" max="10">
   
-  <fieldset>
-   <h2>
+  </fieldset>
+   
+	<fieldset>
+	<h2>
     Fries
     </h2>
     <label for="Fries">Size:</label>
-  <select name="Size" id="Size">
+  <select name="fries" id="Size">
     <option value="Small">S</option>
     <option value="Medium">M</option>
     <option value="Large">L</option>
   </select>
   <p>Flavor</p>
-  <input id="id-crust1"
-           name="crust"
+  <input id="id-fries1"
+           name="fries"
            type="radio"
            value="Thin">
       
@@ -360,8 +412,8 @@ Enter text here...</textarea>
           
     </label>
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-fries2"
+           name="fries"
            type="radio"
            value="Classic">
       
@@ -369,8 +421,8 @@ Enter text here...</textarea>
           
     </label>
     
-    <input id="id-crust1"
-           name="crust"
+    <input id="id-fries1"
+           name="fries"
            type="radio"
            value="Thin">
       
@@ -386,14 +438,14 @@ Enter text here...</textarea>
   <fieldset>
   <h2>Drinks</h2>
   <label for="Drinks">drinks:</label>
-  <select name="Size" id="Size">
+  <select name="drinks" id="Size">
     <option value="Soda">Soda</option>
     <option value="Milk">Milk</option>
     <option value="Water">Water</option>
     <option value="Juice">Juice</option>
   </select>
   <label for="Drinks">Size:</label>
-  <select name="Size" id="Size">
+  <select name="drinks" id="Size">
     <option value="S">Small</option>
     <option value="M">Medium</option>
     <option value="L">Large</option>
@@ -403,8 +455,9 @@ Enter text here...</textarea>
   <input type="number" id="quantity" name="quantity" min="1" max="10">
   </label>
   </fieldset>
-    <input id="id-crust1"
-           name="crust"
+  <br>
+    <input id="id-drinks1"
+           name="drinks"
            type="radio"
            value="Thin">
       
@@ -412,8 +465,8 @@ Enter text here...</textarea>
           
     </label>
     <label>
-      <input id="id-crust2"
-           name="crust"
+      <input id="id-drinks2"
+           name="drinks"
            type="radio"
            value="Classic">
       
@@ -424,8 +477,8 @@ Enter text here...</textarea>
     <label for="id-delivery">
    Feedback
   </label>
- <textarea rows="4" cols="50" name="comment" form="usrform">
-Enter text here...</textarea>
+    <textarea rows="4" cols="50" name="comment" form="usrform">
+  Enter text here...</textarea>
           
     
   </fieldset>
@@ -433,6 +486,8 @@ Enter text here...</textarea>
        value="Submit Order"
        onclick="submitOrder(event)">
 <button type="reset" value="Reset">Reset</button>
+</form>
+</div>
 
 
 
