@@ -1,0 +1,169 @@
+body{
+    font-family: 'Montserrat';
+    line-height: 30px;
+    text-align: justify;
+    margin: 0;
+    color:#0c185a;
+}
+p{
+    font-family: 'Roboto';
+    font-size: large;
+}
+h1{
+    text-align: center;
+    font-size:50px;
+    color:#fdc819;
+}
+h2{
+    font-size:50px;
+    color:#358fd8;
+}
+cite{
+    display: block;
+    text-align: right;
+}
+div.center{
+    text-align: center;
+    padding: 0 30px;
+}
+div.left{
+    float: left;
+    padding: 0 30px;
+}
+div.right{
+    float: right;
+    padding: 20px 100px 10px 10px;
+}
+div.text{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:#1d6cad;
+    width: 30%;
+    margin-left: 150px;
+}
+
+hr.line{
+    border: 2px solid #bed0e6;
+    width: 85%;
+}
+hr.line2{
+    border: 1px solid #f7cc10;
+    width: 100%;
+}
+
+ul{
+    background: #ffffff !important; 
+    font-size:20px;
+    font-family: DM Sans;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+li img{
+    background-color: #ffffff;
+    float: left;
+    height:70px;
+    padding: 7px 0 0 10px;
+}
+
+li a, li button{
+    background-color: #ffffff;
+    display: block;
+    color: #0c185a;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+    font-weight:bold;
+    float: right;
+}
+
+li a:hover, a.button:focus, .dropdown:hover .dropbtn{
+    color: #358fd8;
+}
+
+.active{
+    color:#0c185a;
+    background-color:#ffc70f;
+}
+
+
+.header-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Cadelina_IMAGES_CSAD/background.jpg");
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-text{
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+    color: white;
+}
+
+  a.button{
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: large;
+    color:#0c185a;
+    background-color:#ffc70f;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    cursor: default;
+  }
+
+  a.button:hover{
+    background-color: #e9b715;
+    color: #1b2a7e;
+  }
+
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    background-color: #ffffff;
+    font-size: large;  
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #0c185a;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: #0c185a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display:block;
+    position:absolute;
+    top: 90px;
+  }
