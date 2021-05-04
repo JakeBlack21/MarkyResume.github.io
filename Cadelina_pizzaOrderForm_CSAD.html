@@ -21,6 +21,8 @@
 
       fieldset{
         border-style: dotted;
+        border-color: orange;
+
       }
 
       input[type="text"],
@@ -143,12 +145,15 @@
       width: 70%;
       margin: auto;
   }
-	    
-   body {
-    background-color: white
+
+  body {
+    background-color: white;
   }
 
-    
+  button {
+  	background-color: orange;
+  }
+
     </style>
 </head>
 <body>
@@ -243,20 +248,22 @@
             Female      
     </label>
   <label for="id-delivery">
-    Destination 
+    Destination *
   </label>
- <textarea rows="4" cols="50" name="comment" form="usrform">
+ <textarea rows="4" cols="50" name="comment" form="usrform" style="width:45%;height:50px;padding:2%;font:0.75em/1em ;">
 Enter text here...</textarea>
+
   <fieldset>
     <h2>
     Burger
     </h2>
+    <br>
       <input id="id-burger1"
            name="burger"
            type="radio"
            value="Thin">
       
-            Single patty
+            Single Patty
           
     </label>
     <label>
@@ -265,7 +272,7 @@ Enter text here...</textarea>
            type="radio"
            value="Classic">
       
-            Double patty
+            Double Patty
           
     </label>
     <hr>
@@ -280,21 +287,21 @@ Enter text here...</textarea>
       <input name="topping"
            type="checkbox"
            value="Cheese">
-            coleslaw
+            Coleslaw
     </label>
     
     <label>
       <input name="topping"
            type="checkbox"
            value="Cheese">
-            tomato
+            Tomato
     </label>
     
     <label>
       <input name="topping"
            type="checkbox"
            value="Cheese">
-            onion
+            Onion
     </label>
     
     
@@ -302,26 +309,26 @@ Enter text here...</textarea>
       <input name="topping"
            type="checkbox"
            value="Cheese">
-            cucumber
+            Cucumber
     </label>
     
     <label>
       <input name="topping"
            type="checkbox"
            value="Cheese">
-            bacon
+            Bacon
     </label>
     
     
     <hr>
-    <p>choice of bun</p>
+    <p>Choice of Bun</p>
     <label>
      <input id="id-buns1"
            name="buns"
            type="radio"
            value="Thin">
       
-         white bun
+         White Bun
           
     </label>
 	
@@ -331,26 +338,27 @@ Enter text here...</textarea>
            type="radio"
            value="Classic">
       
-         wheat bun
+         Wheat Bun
           
     </label>
-	
-    <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="15">
-   </fieldset>
- 
-  <fieldset>
+	<br>
+    <label for="quantity">Quantity:
+  		<input type="number" id="quantity" name="quantity" min="1" max="15">
+   	</fieldset>
+ 	</label>
+
+  	<fieldset>
     <h2>
-      Pasta
+      Pasta Sauce
     </h2>
+    <br>
     <label>
-    <p>Sauce</p>
       <input id="id-pasta1"
            name="pasta"
            type="radio"
            value="Thin">
       
-            Carbonara
+            Pesto Pasta
           
     </label>
     <label>
@@ -359,16 +367,16 @@ Enter text here...</textarea>
            type="radio"
            value="Classic">
       
-            Pesto
+            Salsa di Noci 
           
     </label>
-    
+    <label>
     <input id="id-pasta1"
            name="pasta"
            type="radio"
            value="Thin">
       
-            Spaghetti
+      		Carbonara 
           
     </label>
     <label>
@@ -377,7 +385,7 @@ Enter text here...</textarea>
            type="radio"
            value="Classic">
       
-            Extra cheese 
+            Bolognese  
           
     </label>
      <label>
@@ -386,24 +394,26 @@ Enter text here...</textarea>
            type="radio"
            value="Classic">
       
-            Extra Sauce 
+            Marinara Sauce
           
     </label>
-    
-    <label for="quantity">Quantity(perbox):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="10">
-  
-  </fieldset>
+    <br>
+    <label for="quantity">Quantity: (perbox)
+ 	 <input type="number" id="quantity" name="quantity" min="1" max="10">
+  	</label>
+  	</fieldset>
    
 	<fieldset>
 	<h2>
     Fries
     </h2>
+    <br>
     <label for="Fries">Size:</label>
   <select name="fries" id="Size">
-    <option value="Small">S</option>
-    <option value="Medium">M</option>
-    <option value="Large">L</option>
+  	<option value="empty">Choose</option>
+    <option value="Small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
   </select>
   <p>Flavor</p>
   <input id="id-fries1"
@@ -429,26 +439,29 @@ Enter text here...</textarea>
            type="radio"
            value="Thin">
       
-            Sour cream
+            Sour Cream
           
     </label>
-    <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="10">
-   
+    <br><br>
+    <label for="quantity">Quantity:
+  		<input type="number" id="quantity" name="quantity" min="1" max="10">
+   	</label>
     
   </fieldset>
   
   <fieldset>
   <h2>Drinks</h2>
-  <label for="Drinks">drinks:</label>
+  <br>
+  <label for="Drinks">Quantity:</label>
   <select name="drinks" id="Size">
-    <option value="Soda">Soda</option>
+  	<option value="empty">Choose</option>
     <option value="Milk">Sprite</option>
     <option value="Water">Coca-cola</option>
     <option value="Juice">Pepsi</option>
   </select>
   <label for="Drinks">Size:</label>
   <select name="drinks" id="Size">
+  	<option value="empty">Choose</option>
     <option value="S">Small</option>
     <option value="M">Medium</option>
     <option value="L">Large</option>
@@ -459,6 +472,13 @@ Enter text here...</textarea>
   </label>
   </fieldset>
   <br>
+   	<label for="id-delivery">
+   		Feedback *
+  	</label>
+    <textarea rows="4" cols="50" name="comment" form="usrform" style="width:45%;height:50px;padding:2%;font:0.75em/1em ;">
+  Hey... say something!</textarea>
+
+  <label>
     <input id="id-drinks1"
            name="drinks"
            type="radio"
@@ -466,8 +486,6 @@ Enter text here...</textarea>
       
             Pickup
           
-    </label>
-    <label>
       <input id="id-drinks2"
            name="drinks"
            type="radio"
@@ -477,18 +495,15 @@ Enter text here...</textarea>
           
     </label>
     
-    <label for="id-delivery">
-   Feedback
-  </label>
-    <textarea rows="4" cols="50" name="comment" form="usrform">
-  Enter text here...</textarea>
           
-    
-  </fieldset>
-  <input type="submit"
-       value="Submit Order"
-       onclick="submitOrder(event)">
-<button type="reset" value="Reset">Reset</button>
+  <label>
+  <input 
+  		type="submit"
+       	value="Submit Order"
+       	onclick="submitOrder(event)">
+  <button type="reset" value="Reset">Reset</button>
+
+  <br><br><br>
 </form>
 </div>
 
